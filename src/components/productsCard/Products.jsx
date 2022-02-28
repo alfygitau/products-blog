@@ -2,6 +2,7 @@ import React from "react";
 import "./Products.css";
 import { Rate } from "rsuite";
 import { Link } from "react-router-dom";
+import { Badge } from 'rsuite';
 
 const Products = ({
   title,
@@ -13,11 +14,14 @@ const Products = ({
   image,
   brand,
   rating,
-  id
+  id,
 }) => {
   return (
     <div className="products-card">
-      <img src={image} alt="product" />
+      <Badge content={rating}>
+        <img src={image} alt="product" />
+      </Badge>
+
       <Link to={`/products/${id}`}>
         <h4>{title}</h4>
       </Link>

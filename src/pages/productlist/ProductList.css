@@ -5,4 +5,17 @@
     display: flex;
     gap: 4em;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+.category-chips{
+    width: 60%;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
