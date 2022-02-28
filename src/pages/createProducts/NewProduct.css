@@ -1,0 +1,9 @@
+.create_product_container{
+    width: 50%;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    border: 0.5px solid rgb(235,235,235);
+    padding: 20px;
+    border-radius: 10px;
+}

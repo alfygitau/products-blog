@@ -27,6 +27,15 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+.auth{
+    display: flex;
+    align-items: center;
+}
 .auth Button{
     width: 100px;
+}
+.cart{
+    font-size: 3rem;
+    text-align: center;
+    /* padding-left: 20px; */
 }
