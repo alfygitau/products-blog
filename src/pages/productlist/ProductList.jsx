@@ -30,6 +30,8 @@ const ProductList = () => {
           image={product.thumbnail}
           brand={product.brand}
           discount={product.discountPercentage}
+          rating={product.rating}
+          id={product.id}
         />
       ))}
     </div>
