@@ -1,0 +1,32 @@
+.navbar{
+    width: 80%;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+.links{
+    display: flex;
+}
+.tabs{
+    display: flex;
+    gap: 4em;
+    align-items: center;
+    justify-content: center;
+}
+.tabs li{
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.auth Button{
+    width: 100px;
+}
