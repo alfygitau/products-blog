@@ -3,7 +3,7 @@ import Chip from "@mui/material/Chip";
 import "./chips.css";
 import axios from "axios";
 
-const Chips = ({handleClick}) => {
+const Chips = ({ handleClick }) => {
   const [categories, setCategories] = useState([]);
 
   const fetchCategories = async () => {
@@ -19,7 +19,6 @@ const Chips = ({handleClick}) => {
     fetchCategories();
   }, []);
 
-
   return (
     <div className="chips">
       {categories.map((category, index) => (
@@ -28,6 +27,7 @@ const Chips = ({handleClick}) => {
           variant="outlined"
           onClick={() => handleClick(category)}
           key={index}
+          style={{ fontSize: "1.2rem" }}
         />
       ))}
     </div>

@@ -6,6 +6,14 @@ import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 const Header = () => {
+
+  const tabs = [
+    { tabname: "Home", path: "/" },
+    { tabname: "Products", path: "/products" },
+    { tabname: "Create Products", path: "/create" },
+    { tabname: "Contact", path: "/contact" },
+  ];
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -13,30 +21,23 @@ const Header = () => {
         <span>shop</span>
       </div>
       <div className="links">
-        <ul className="tabs">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/products">Products</a>
-          </li>
-          <li>
-            <a href="/create">Create Products</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
+        {tabs.map((tab, index) => (
+          <ul className="tabs" key={index}>
+            <li >
+              <a href={tab.path} >
+                {tab.tabname}
+              </a>
+            </li>
+          </ul>
+        ))}
       </div>
       <div className="auth">
         <Button appearance="ghost">
           Login | <AiOutlineLogin />
         </Button>
-        &nbsp;
-        &nbsp;
-        &nbsp;
+        &nbsp; &nbsp; &nbsp;
         <span className="cart-icon">
-          <MdOutlineAddShoppingCart className="cart"/>
+          <MdOutlineAddShoppingCart className="cart" />
         </span>
       </div>
     </div>

@@ -12,9 +12,9 @@ const ProductList = () => {
   const [searchResults, setSearchResults] = useState([])
 
   const fetchProducts = async () => {
-    await axios.get("http://localhost:8000/products").then((response) => {
-      console.log(response.data);
-      setProducts(response.data);
+    await axios.get("https://dummyjson.com/products").then((response) => {
+      console.log(response.data.products);
+      setProducts(response.data.products);
     });
   };
 
@@ -43,9 +43,6 @@ const ProductList = () => {
         setFilteredProducts(response.data.products)
       });
   };
-  useEffect(() => {
-    searchProducts();
-  }, []);
 
   console.log("results", searchResults);
 

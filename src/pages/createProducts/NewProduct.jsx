@@ -9,15 +9,29 @@ const NewProduct = () => {
   const [price, setPrice] = useState(0);
   const [stock, setStock] = useState(0);
   const [rating, setRating] = useState(0);
-  const [discountPercentage, setDiscountPercentage] = useState();
-  const [picture, setPicture] = useState('');
+  const [discountPercentage, setDiscountPercentage] = useState(0);
+  const [picture, setPicture] = useState("");
 
   const onPictureChange = (e) => {
     setPicture(URL.createObjectURL(e.target.files[0]));
   };
 
+    const priceData = parseInt(price);
+    const stockData = parseInt(stock);
+    const ratingData = parseInt(rating);
+    const discount = parseInt(discountPercentage);
 
-  const data = {title, brand, category, description, price, stock, rating, discountPercentage, picture}
+  const data = {
+    title,
+    brand,
+    category,
+    description,
+    priceData,
+    stockData,
+    ratingData,
+    discount,
+    picture,
+  };
   console.log(data);
 
   return (

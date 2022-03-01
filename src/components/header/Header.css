@@ -39,3 +39,12 @@
     text-align: center;
     /* padding-left: 20px; */
 }
+.tab-active{
+    color: orange;
+}
+.tabs li a:hover{
+    color: orange;
+}
+.tab-inactive{
+    color: blue;
+}
