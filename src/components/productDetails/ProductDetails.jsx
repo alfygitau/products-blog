@@ -12,7 +12,7 @@ const [product, setProduct] = useState({})
 const fetchProduct =async(id)=>{
     await axios.get(`http://localhost:8000/products/${id}`)
     .then(response=>{
-        console.log(response.data);
+        console.log('details',response.data);
         setProduct(response.data)
     })
 }

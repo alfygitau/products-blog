@@ -2,12 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Chips from "../../components/chips/chips";
 import Products from "../../components/productsCard/Products";
+import Search from "../../components/searchBar/SearchBar";
 import "./ProductList.css";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [show, setShow] = useState(true);
+  const [searchResults, setSearchResults] = useState([])
 
   const fetchProducts = async () => {
     await axios.get("http://localhost:8000/products").then((response) => {
@@ -31,13 +33,26 @@ const ProductList = () => {
       });
   };
 
-  //   useEffect(()=>{
-  //       handleClick()
-  //   },[])
+  const searchProducts = async (keyword) => {
+    await axios
+      .get(`https://dummyjson.com/products/search?q=${keyword}`)
+      .then((response) => {
+        console.log(response.data.products);
+        setSearchResults(response.data.products);
+        setShow(false)
+        setFilteredProducts(response.data.products)
+      });
+  };
+  useEffect(() => {
+    searchProducts();
+  }, []);
+
+  console.log("results", searchResults);
 
   return (
     <>
       <div className="category-chips">
+          <Search searchProducts={searchProducts}/>
         <Chips handleClick={handleClick} />
       </div>
       <div className="productlist">
