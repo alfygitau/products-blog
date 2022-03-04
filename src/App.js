@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/header/Header";
 import ProductDetails from "./components/productDetails/ProductDetails";
 import NewProduct from "./pages/createProducts/NewProduct";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/create" element={<NewProduct/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

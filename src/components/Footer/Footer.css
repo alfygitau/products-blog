@@ -1,0 +1,10 @@
+.footer{
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer h5{
+    text-align: center;
+}

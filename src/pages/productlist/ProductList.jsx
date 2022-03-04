@@ -63,6 +63,7 @@ const ProductList = () => {
     <>
       <div className="category-chips">
         <Search searchProducts={searchProducts} />
+        <h4>Categories</h4>
         <Chips handleClick={handleClick} />
       </div>
       <div className="productlist">
