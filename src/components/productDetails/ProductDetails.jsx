@@ -10,7 +10,7 @@ const [product, setProduct] = useState({})
   const { id } = param;
 
 const fetchProduct =async(id)=>{
-    await axios.get(`http://localhost:8000/products/${id}`)
+    await axios.get(`https://dummyjson.com/products/${id}?limit=100&skip=0`)
     .then(response=>{
         console.log('details',response.data);
         setProduct(response.data)
