@@ -9,3 +9,12 @@
     height: 200px;
     width: 100%;
 }
+.products-card h5{
+    color: rgb(204,46,67);
+}
+.products-card h6{
+    color: rgb(204,46,67);
+}
+.products-card a{
+    text-decoration: none;
+}

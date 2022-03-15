@@ -40,11 +40,15 @@
     /* padding-left: 20px; */
 }
 .tab-active{
-    color: orange;
+    color: rgb(204,46,67);
 }
 .tabs li a:hover{
-    color: orange;
+    color: rgb(204,46,67);
 }
 .tab-inactive{
     color: blue;
+}
+.auth-button:hover{
+    color: rgb(204,46,67);
+
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./Products.css";
 import { Rate } from "rsuite";
 import { Link } from "react-router-dom";
-import { Badge } from 'rsuite';
+import { Badge } from "rsuite";
 
 const Products = ({
   title,
@@ -23,11 +23,13 @@ const Products = ({
       </Badge>
 
       <Link to={`/products/${id}`}>
-        <h4>{title}</h4>
+        <a href={`/products/${id}`}>
+          <h4>{title}</h4>
+        </a>
       </Link>
-      <h5>Brand: {brand}</h5>
+      <h5 className="brand">Brand: {brand}</h5>
       <span>Category: {category}</span>
-      <h6>Price: $ {price}</h6>
+      <h6 className="price">Price: $ {price}</h6>
       <Rate value={Math.trunc(rating)} allowHalf />
       <span>Available: {stock}</span>
       <p>Description: {description}</p>

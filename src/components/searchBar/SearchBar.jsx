@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./searchBar.css";
 
-const Search = ({searchProducts}) => {
-  const [keyword, setKeyword] = useState('');
-  
+const Search = ({ searchProducts }) => {
+  const [keyword, setKeyword] = useState("");
 
   return (
     <div className="container">
@@ -17,10 +16,14 @@ const Search = ({searchProducts}) => {
               id="search"
               placeholder="Search products, categories and brand"
               value={keyword}
-              onChange={(e)=>setKeyword(e.target.value)}
+              onChange={(e) => setKeyword(e.target.value)}
             />
             <span className="input-group-btn">
-              <button className="btn btn-default" type="submit" onClick={()=>searchProducts(keyword)}>
+              <button
+                className="btn btn-default"
+                type="submit"
+                onClick={() => searchProducts(keyword)}
+              >
                 <span className="glyphicon glyphicon-search"></span>
               </button>
             </span>
