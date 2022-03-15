@@ -58,7 +58,7 @@ const Cart = () => {
           </tbody>
         ))}
       </table>
-      <h5 >Other actions</h5>
+      <h5>Other actions</h5>
       <button
         type="button"
         onClick={handleEmptyCart}
