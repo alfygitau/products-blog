@@ -31,13 +31,13 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       <img src={product.thumbnail} alt="product" />
-      <h4>{product.title}</h4>
-      <h5>{product.brand}</h5>
-      <h5>$ {product.price}</h5>
-      <h6>{product.category}</h6>
+      <h4>Title: {product.title}</h4>
+      <h5>Brand: {product.brand}</h5>
+      <h5>Price: $ {product.price}</h5>
+      <h6>Category: {product.category}</h6>
       <span>Available in Stock: {product.stock}</span>
-      <span>{product.rating}</span>
-      <p>{product.description}</p>
+      <h6>Rating: {product.rating}</h6>
+      <p>Description: {product.description}</p>
       <button
         type="button"
         onClick={handleAddToCart}

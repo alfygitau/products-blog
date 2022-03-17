@@ -20,6 +20,7 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
+        <h3 style={{textAlign: "center"}}>My Shopping Bag</h3>
       <table className="table">
         <thead>
           <tr>

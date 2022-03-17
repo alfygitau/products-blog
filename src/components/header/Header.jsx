@@ -5,7 +5,7 @@ import Button from "rsuite/Button";
 import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const tabs = [
@@ -21,7 +21,10 @@ const Header = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          {" "}
+          <img src={logo} alt="logo" />
+        </Link>
         <span>shop</span>
       </div>
       <div className="links">

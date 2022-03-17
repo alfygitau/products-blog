@@ -30,7 +30,7 @@ const ProductList = () => {
     setPage(value);
     setLimit(value);
   };
-  console.log("limit", limit);
+  console.log("pagination", limit);
 
   useEffect(() => {
     fetchProducts(limit);
@@ -46,6 +46,7 @@ const ProductList = () => {
         setFilteredProducts(response.data.products);
       });
   };
+
 
   const searchProducts = async (keyword) => {
     await axios
