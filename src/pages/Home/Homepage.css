@@ -1,0 +1,31 @@
+.home-container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.products-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.products-links a{
+    margin-right: 20px;
+    font-size: 2rem;
+}
+.featured{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+.outlet{
+    padding-top: 20px;
+}
+.new-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}

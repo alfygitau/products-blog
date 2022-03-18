@@ -24,7 +24,7 @@ const Products = ({
 
       <Link to={`/products/${id}`}>
         <a href={`/products/${id}`}>
-          <h4>{title}</h4>
+          <h4>{title.substring(0, 10)}</h4>
         </a>
       </Link>
       <h5 className="brand">Brand: {brand}</h5>
@@ -32,7 +32,7 @@ const Products = ({
       <h6 className="price">Price: $ {price}</h6>
       <Rate value={Math.trunc(rating)} allowHalf />
       <span>Available: {stock}</span>
-      <p>Description: {description}</p>
+      <p>Description: {description.substring(0, 150)}...</p>
     </div>
   );
 };
