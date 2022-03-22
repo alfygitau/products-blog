@@ -10,7 +10,7 @@
 }
 .products-links a {
   margin-right: 20px;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 .featured {
   display: flex;
@@ -28,4 +28,11 @@
   gap: 2em;
   align-items: center;
   justify-content: center;
+}
+.products-links a.active {
+  color: rgb(204, 46, 67);
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
 }

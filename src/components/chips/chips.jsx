@@ -27,7 +27,7 @@ const Chips = ({ handleClick }) => {
           variant="outlined"
           onClick={() => handleClick(category)}
           key={index}
-          style={{ fontSize: "1.2rem" }}
+          style={{ fontSize: "0.9rem" }}
         />
       ))}
     </div>

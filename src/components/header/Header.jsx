@@ -13,6 +13,7 @@ const Header = () => {
     { tabname: "Products", path: "/products" },
     { tabname: "Create Products", path: "/create" },
     { tabname: "Contact", path: "/contact" },
+    { tabname: "About", path: "/about" },
   ];
 
   const quantity = useSelector((state) => state.cart.quantity);

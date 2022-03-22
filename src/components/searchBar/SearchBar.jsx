@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./searchBar.css";
+import SavedSearchIcon from "@mui/icons-material/SavedSearch";
 
 const Search = ({ searchProducts }) => {
   const [keyword, setKeyword] = useState("");
@@ -8,7 +9,7 @@ const Search = ({ searchProducts }) => {
     <div className="container">
       <div className="row">
         <div className="col-xs-8 col-xs-offset-2">
-          <div className="input-group">
+          <div class="input-group">
             <input
               type="text"
               className="form-control"
@@ -18,15 +19,15 @@ const Search = ({ searchProducts }) => {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            <span className="input-group-btn">
+            <div class="input-group-text" id="btnGroupAddon">
               <button
-                className="btn btn-default"
                 type="submit"
                 onClick={() => searchProducts(keyword)}
+                style={{ backgroundColor: "transparent" }}
               >
-                <span className="glyphicon glyphicon-search"></span>
+                <SavedSearchIcon />
               </button>
-            </span>
+            </div>
           </div>
         </div>
       </div>
