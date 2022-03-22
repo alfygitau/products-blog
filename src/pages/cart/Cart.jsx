@@ -20,7 +20,7 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-        <h3 style={{textAlign: "center"}}>My Shopping Bag</h3>
+      <h3 style={{ textAlign: "center" }}>My Shopping Bag</h3>
       <table className="table">
         <thead>
           <tr>
@@ -66,6 +66,13 @@ const Cart = () => {
         className="btn btn-danger"
       >
         Empty Cart
+      </button>
+      <button
+        type="button"
+        className="btn-outline-dark"
+        style={{ marginLeft: "10px", padding: "7px", borderRadius: "10px" }}
+      >
+        Proceed to checkout
       </button>
       <h5 style={{ paddingTop: "20px" }}>Quantity: {cartQuantity}</h5>
       <h4>Total: $ {cartTotal}</h4>

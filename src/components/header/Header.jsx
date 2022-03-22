@@ -5,7 +5,7 @@ import Button from "rsuite/Button";
 import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const tabs = [
@@ -31,13 +31,13 @@ const Header = () => {
         {tabs.map((tab, index) => (
           <ul className="tabs" key={index}>
             <li>
-              <a href={tab.path}>{tab.tabname}</a>
+              <NavLink to={tab.path}>{tab.tabname}</NavLink>
             </li>
           </ul>
         ))}
       </div>
       <div className="auth">
-        <Button appearance="ghost" className="auth-button">
+        <Button appearance="primary" color="red" className="auth-button">
           Login | <AiOutlineLogin />
         </Button>
         &nbsp; &nbsp; &nbsp;

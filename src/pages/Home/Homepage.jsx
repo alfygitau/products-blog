@@ -1,13 +1,13 @@
 import React from "react";
 import "./Homepage.css";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Homepage = () => {
   return (
     <div className="home-container">
       <div className="products-links">
-        <Link to="new">New Products</Link>
-        <Link to="featured">Featured Products</Link>
+        <NavLink to="new">New Products</NavLink>
+        <NavLink to="featured">Featured Products</NavLink>
       </div>
       <div className="outlet">
         <Outlet />

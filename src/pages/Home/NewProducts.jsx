@@ -32,6 +32,7 @@ const NewProducts = () => {
             price={product.price}
             rating={product.rating.rate}
             description={product.description}
+            id={product.id}
           />
         ))}
       </div>

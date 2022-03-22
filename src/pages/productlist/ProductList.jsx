@@ -11,8 +11,8 @@ const ProductList = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
-  const [page, setPage] = useState(10);
-  const [limit, setLimit] = useState(10);
+  const [page, setPage] = useState(12);
+  const [limit, setLimit] = useState(12);
   const [searchResults, setSearchResults] = useState([]);
 
   const url = `https://dummyjson.com/products?limit=${limit}&skip=0`;

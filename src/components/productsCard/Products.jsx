@@ -23,9 +23,7 @@ const Products = ({
       </Badge>
 
       <Link to={`/products/${id}`}>
-        <a href={`/products/${id}`}>
-          <h4>{title.substring(0, 10)}</h4>
-        </a>
+        <h4>{title.substring(0, 10)}</h4>
       </Link>
       <h5 className="brand">Brand: {brand}</h5>
       <span>Category: {category}</span>

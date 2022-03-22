@@ -11,6 +11,7 @@ const ProductDetails = () => {
 
   const param = useParams();
   const { id } = param;
+  console.log("id", id);
 
   const fetchProduct = async (id) => {
     await axios

@@ -46,10 +46,15 @@
 .tabs li a:hover{
     color: rgb(204,46,67);
 }
-.tab-inactive{
-    color: blue;
-}
 .auth-button:hover{
     color: rgb(204,46,67);
-
+}
+.tabs li a.active{
+    color: white;
+    background-color: rgb(204,46,67);
+    border-radius: 10px;
+    padding: 5px;
+}
+.tabs li a{
+    text-decoration: none;
 }

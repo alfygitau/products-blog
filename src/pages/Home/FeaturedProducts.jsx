@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       const response = await axios.get(
-        "https://dummyjson.com/products?limit=10&skip=10"
+        "https://dummyjson.com/products?limit=20&skip=10"
       );
       setFeaturedProducts(response.data.products);
     };
@@ -29,10 +29,11 @@ const FeaturedProducts = () => {
               price={product.price}
               category={product.category}
               title={product.title}
-              image={product.thumbnail}
+              image={product.images[0]}
               rating={product.rating}
               stock={product.stock}
               description={product.description}
+              id={product.id}
             />
           </div>
         ))}
