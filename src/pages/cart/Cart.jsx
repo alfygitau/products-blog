@@ -27,6 +27,7 @@ const Cart = () => {
             <th scope="col">productId</th>
             <th scope="col">Image</th>
             <th scope="col">Title</th>
+            <th scope="col">Quantity</th>
             <th scope="col">Price</th>
             <th scope="col">brand</th>
             <th scope="col">actions</th>
@@ -44,7 +45,8 @@ const Cart = () => {
                 />
               </td>
               <td>{item.title}</td>
-              <td>{item.price}</td>
+              <td>{item.cartQuantity}</td>
+              <td>$ {item.price}</td>
               <td>{item.brand}</td>
               <td>
                 <button

@@ -1,20 +1,24 @@
-.products-card{
-    height: 550px;
-    width: 250px;
-    border: 1px solid rgb(235,235,235);
-    border-radius: 10px;
-    padding: 20px;
+.products-card {
+  height: 550px;
+  width: 250px;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 20px;
 }
-.products-card img{
-    height: 200px;
-    width: 100%;
+.products-card:hover {
+  transform: scale(1.05);
+  transition: all 1s ease-out;
 }
-.products-card h5{
-    color: rgb(204,46,67);
+.products-card img {
+  height: 200px;
+  width: 100%;
 }
-.products-card h6{
-    color: rgb(204,46,67);
+.products-card h5 {
+  color: rgb(204, 46, 67);
 }
-.products-card a{
-    text-decoration: none;
+.products-card h6 {
+  color: rgb(204, 46, 67);
+}
+.products-card a {
+  text-decoration: none;
 }

@@ -5,6 +5,7 @@ import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { Badge } from "@mui/material";
 
 const Header = () => {
   const tabs = [
@@ -37,13 +38,16 @@ const Header = () => {
         ))}
       </div>
       <div className="auth">
-        <button className="btn btn-outline-primary">Login | <AiOutlineLogin /></button>
+        <button className="btn btn-outline-primary">
+          Login | <AiOutlineLogin />
+        </button>
         &nbsp; &nbsp; &nbsp;
         <span className="cart-icon">
-          <a href="/cart">
-            <MdOutlineAddShoppingCart className="cart" />
-          </a>
-          <span className="badge bg-danger">{quantity}</span>
+          <Link to="/cart">
+            <Badge badgeContent={quantity} color="primary">
+              <MdOutlineAddShoppingCart className="cart" />
+            </Badge>
+          </Link>
         </span>
       </div>
     </div>

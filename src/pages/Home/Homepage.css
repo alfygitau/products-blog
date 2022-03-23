@@ -36,3 +36,9 @@
   padding: 5px;
   text-decoration: none;
 }
+.plus-icon{
+  color: white;
+}
+.carousel-inner button:hover{
+  background-color: rgb(204, 46, 67);
+}
