@@ -9,7 +9,7 @@ const Search = ({ searchProducts }) => {
     <div className="container">
       <div className="row">
         <div className="col-xs-8 col-xs-offset-2">
-          <div class="input-group">
+          <div className="input-group">
             <input
               type="text"
               className="form-control"
@@ -19,7 +19,7 @@ const Search = ({ searchProducts }) => {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            <div class="input-group-text" id="btnGroupAddon">
+            <div className="input-group-text" id="btnGroupAddon">
               <button
                 type="submit"
                 onClick={() => searchProducts(keyword)}

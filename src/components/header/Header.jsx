@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import logo from "../../assets/logo2.png";
-import Button from "rsuite/Button";
 import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
@@ -38,15 +37,13 @@ const Header = () => {
         ))}
       </div>
       <div className="auth">
-        <Button appearance="primary" color="red" className="auth-button">
-          Login | <AiOutlineLogin />
-        </Button>
+        <button className="btn btn-outline-primary">Login | <AiOutlineLogin /></button>
         &nbsp; &nbsp; &nbsp;
         <span className="cart-icon">
           <a href="/cart">
             <MdOutlineAddShoppingCart className="cart" />
           </a>
-          <span className="badge bg-primary">{quantity}</span>
+          <span className="badge bg-danger">{quantity}</span>
         </span>
       </div>
     </div>
