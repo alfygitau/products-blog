@@ -4,7 +4,7 @@ import logo from "../../assets/logo2.png";
 import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Badge } from "@mui/material";
 
 const Header = () => {
@@ -18,6 +18,7 @@ const Header = () => {
 
   const quantity = useSelector((state) => state.cart.quantity);
   console.log("quantity", quantity);
+  const navigate = useNavigate();
 
   return (
     <div className="navbar">
@@ -38,7 +39,10 @@ const Header = () => {
         ))}
       </div>
       <div className="auth">
-        <button className="btn btn-outline-primary">
+        <button
+          className="btn btn-outline-primary"
+          onClick={() => navigate("/login")}
+        >
           Login | <AiOutlineLogin />
         </button>
         &nbsp; &nbsp; &nbsp;

@@ -10,6 +10,7 @@ import NewProduct from "./pages/createProducts/NewProduct";
 import FeaturedProducts from "./pages/Home/FeaturedProducts";
 import Homepage from "./pages/Home/Homepage";
 import NewProducts from "./pages/Home/NewProducts";
+import Login from "./pages/Login/Login";
 import ProductList from "./pages/productlist/ProductList";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/cart" element={<Cart/>} />
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

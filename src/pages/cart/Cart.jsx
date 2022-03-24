@@ -33,7 +33,7 @@ const Cart = () => {
             <th scope="col">actions</th>
           </tr>
         </thead>
-        {cartItems.map((item, index) => (
+        {cartItems?.map((item, index) => (
           <tbody key={index}>
             <tr>
               <th scope="row">{item.id}</th>
@@ -71,7 +71,7 @@ const Cart = () => {
       </button>
       <button
         type="button"
-        className="btn-outline-dark"
+        className=" btn btn-outline-dark"
         style={{ marginLeft: "10px", padding: "7px", borderRadius: "10px" }}
       >
         Proceed to checkout
