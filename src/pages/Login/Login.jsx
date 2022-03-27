@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { login } from "../../redux/auth";
 import "./Login.css";
 
@@ -13,49 +14,50 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     login(dispatch, { username, password });
-    navigate("/")
+    navigate("/");
+    toast.success("successfully logged in")
   };
   return (
     <>
       <div className="login-container">
         <form onSubmit={handleLogin}>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Username
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               onChange={(e) => setUsername(e.target.value)}
             />
-            <div id="emailHelp" class="form-text">
+            <div id="emailHelp" className="form-text">
               We'll never share your username with anyone else.
             </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="exampleInputPassword1"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div class="mb-3 form-check">
+          <div className="mb-3 form-check">
             <input
               type="checkbox"
-              class="form-check-input"
+              className="form-check-input"
               id="exampleCheck1"
             />
-            <label class="form-check-label" for="exampleCheck1">
+            <label className="form-check-label" htmlFor="exampleCheck1">
               Check me out
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>

@@ -31,7 +31,10 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
-      <img src={product.thumbnail} alt="product" />
+      <div className="product-image">
+        <img src={product.thumbnail} alt="product" />
+      </div>
+      <div className="description">
       <h4>Title: {product.title}</h4>
       <h5>Brand: {product.brand}</h5>
       <h5>Price: $ {product.price}</h5>
@@ -46,6 +49,7 @@ const ProductDetails = () => {
       >
         ADD TO CART
       </button>
+      </div>
     </div>
   );
 };

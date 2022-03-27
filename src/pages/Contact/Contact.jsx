@@ -22,13 +22,13 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="exampleForm"
                 placeholder="John Smith"
               />
             </div>
             <div className="mb-3">
-              <label for="exampleFormControlInput1" className="form-label">
+              <label htmlFor="exampleFormControlInput1" className="form-label">
                 Email address
               </label>
               <input
@@ -39,7 +39,7 @@ const Contact = () => {
               />
             </div>
             <div className="mb-3">
-              <label for="exampleFormControlTextarea1" className="form-label">
+              <label htmlFor="exampleFormControlTextarea1" className="form-label">
                 Message
               </label>
               <textarea

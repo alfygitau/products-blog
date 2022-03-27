@@ -1,8 +1,10 @@
 .product-details{
-    width: 40%;
+    width: 50%;
     height: fit-content;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    flex: 1;
 }
 .product-details img{
     height: 300px;
@@ -10,4 +12,11 @@
 }
 .product-details h4{
     color: rgb(204,46,67)
+}
+.description{
+    padding: 20px;
+    flex: 1;
+}
+.description p{
+    padding-bottom: 20px;
 }

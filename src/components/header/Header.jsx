@@ -3,9 +3,12 @@ import "./Header.css";
 import logo from "../../assets/logo2.png";
 import { AiOutlineLogin } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Badge } from "@mui/material";
+import { Avatar } from "rsuite";
+import { logout } from "../../redux/userRedux";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const tabs = [
@@ -19,6 +22,15 @@ const Header = () => {
   const quantity = useSelector((state) => state.cart.quantity);
   console.log("quantity", quantity);
   const navigate = useNavigate();
+  const user = useSelector((state) => state.login.user);
+  console.log(user);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+    toast.success("user logged out")
+  };
 
   return (
     <div className="navbar">
@@ -38,22 +50,39 @@ const Header = () => {
           </ul>
         ))}
       </div>
-      <div className="auth">
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => navigate("/login")}
-        >
-          Login | <AiOutlineLogin />
-        </button>
-        &nbsp; &nbsp; &nbsp;
-        <span className="cart-icon">
-          <Link to="/cart">
-            <Badge badgeContent={quantity} color="primary">
-              <MdOutlineAddShoppingCart className="cart" />
-            </Badge>
+      {user ? (
+        <div className="authenticated">
+          <Avatar size="md" circle src={user.image} alt="@SevenOutman" />
+          <Link to="/profile">
+            <span>{user.username}</span>
           </Link>
-        </span>
-      </div>
+          <button className="btn btn-outline-dark" onClick={handleLogout}>
+            Logout
+          </button>
+          <Link to="/cart">
+              <Badge badgeContent={quantity} color="primary">
+                <MdOutlineAddShoppingCart className="cart" />
+              </Badge>
+            </Link>
+        </div>
+      ) : (
+        <div className="auth">
+          <button
+            className="btn btn-outline-primary"
+            onClick={() => navigate("/login")}
+          >
+            Login | <AiOutlineLogin />
+          </button>
+          &nbsp; &nbsp; &nbsp;
+          <span className="cart-icon">
+            <Link to="/cart">
+              <Badge badgeContent={quantity} color="primary">
+                <MdOutlineAddShoppingCart className="cart" />
+              </Badge>
+            </Link>
+          </span>
+        </div>
+      )}
     </div>
   );
 };

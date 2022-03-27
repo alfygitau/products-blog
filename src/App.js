@@ -11,7 +11,10 @@ import FeaturedProducts from "./pages/Home/FeaturedProducts";
 import Homepage from "./pages/Home/Homepage";
 import NewProducts from "./pages/Home/NewProducts";
 import Login from "./pages/Login/Login";
+import NotFound from "./pages/NotFound/NotFound";
 import ProductList from "./pages/productlist/ProductList";
+import PrivateRoute from "./PrivateRoute";
+import Profile from "./Profile/Profile";
 
 function App() {
   return (
@@ -24,13 +27,15 @@ function App() {
             <Route path="new" element={<NewProducts/>}/>
             <Route path="featured" element={<FeaturedProducts/>}/>
           </Route>
-          <Route path="/products" element={<ProductList />} />
+          <Route path="/products" element={<PrivateRoute component={ProductList} />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/create" element={<NewProduct/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
