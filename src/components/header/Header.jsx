@@ -60,7 +60,7 @@ const Header = () => {
             Logout
           </button>
           <Link to="/cart">
-              <Badge badgeContent={quantity} color="primary">
+              <Badge badgeContent={quantity} color="secondary" >
                 <MdOutlineAddShoppingCart className="cart" />
               </Badge>
             </Link>
@@ -76,7 +76,7 @@ const Header = () => {
           &nbsp; &nbsp; &nbsp;
           <span className="cart-icon">
             <Link to="/cart">
-              <Badge badgeContent={quantity} color="primary">
+              <Badge badgeContent={quantity} color="success">
                 <MdOutlineAddShoppingCart className="cart" />
               </Badge>
             </Link>
