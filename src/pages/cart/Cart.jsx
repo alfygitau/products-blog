@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { emptyCart, removeFromCart } from "../../redux/cartRedux";
 import "./Cart.css";
 
@@ -9,6 +10,7 @@ const Cart = () => {
   const cartQuantity = useSelector((state) => state.cart.quantity);
   const cartTotal = useSelector((state) => state.cart.total);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleRemove = (item) => {
     dispatch(removeFromCart(item));
@@ -73,6 +75,7 @@ const Cart = () => {
         type="button"
         className=" btn btn-outline-dark"
         style={{ marginLeft: "10px", padding: "7px", borderRadius: "10px" }}
+        onClick={()=>navigate("/checkout")}
       >
         Proceed to checkout
       </button>

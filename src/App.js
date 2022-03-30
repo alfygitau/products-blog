@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import ProductDetails from "./components/productDetails/ProductDetails";
 import About from "./pages/About/About";
 import Cart from "./pages/cart/Cart";
+import Checkout from "./pages/Checkout/Checkout";
 import Contact from "./pages/Contact/Contact";
 import NewProduct from "./pages/createProducts/NewProduct";
 import FeaturedProducts from "./pages/Home/FeaturedProducts";
@@ -13,8 +14,8 @@ import NewProducts from "./pages/Home/NewProducts";
 import Login from "./pages/Login/Login";
 import NotFound from "./pages/NotFound/NotFound";
 import ProductList from "./pages/productlist/ProductList";
+import Profile from "./pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
-import Profile from "./Profile/Profile";
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
+          <Route
+            path="/checkout"
+            element={<PrivateRoute component={Checkout} />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

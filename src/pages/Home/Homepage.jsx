@@ -5,7 +5,7 @@ import Slider from "../../components/Slider/Slider";
 
 const Homepage = () => {
   return (
-    <div className="home-container">
+    <div className="container">
       <Slider />
       <div className="products-links">
         <NavLink to="new">New Products</NavLink>||&nbsp;
