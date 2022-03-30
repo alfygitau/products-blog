@@ -48,6 +48,7 @@ const Checkout = () => {
             </div>
             <div className="col-md-7 col-lg-8">
               <h4 className="mb-3">Billing address</h4>
+              <hr className="my-4" />
               <form className="needs-validation" noValidate>
                 <div className="row g-3">
                   <div className="col-sm-6">
@@ -171,9 +172,7 @@ const Checkout = () => {
                     <div className="invalid-feedback">Zip code required.</div>
                   </div>
                 </div>
-
                 <hr className="my-4" />
-
                 <div className="form-check">
                   <input
                     type="checkbox"
