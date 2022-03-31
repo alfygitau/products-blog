@@ -18,11 +18,10 @@ const Products = ({
 }) => {
   return (
     <div className="products-card">
+      <Link to={`/products/${id}`}>
       <Badge content={rating}>
         <img src={image} alt="product" />
-      </Badge>
-
-      <Link to={`/products/${id}`}>
+      </Badge>      
         <h4>{title.substring(0, 10)}</h4>
       </Link>
       <h5 className="brand">Brand: {brand}</h5>
