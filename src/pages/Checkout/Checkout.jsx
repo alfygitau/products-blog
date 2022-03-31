@@ -7,6 +7,7 @@ const Checkout = () => {
   const cart = useSelector((state) => state.cart.products);
   const quantity = useSelector((state) => state.cart.quantity);
   const total = useSelector((state) => state.cart.total);
+  const name = useSelector((state)=>state.login.user.firstName)
   console.log("cart", cart);
   return (
     <>
@@ -15,7 +16,7 @@ const Checkout = () => {
           <div className="row g-5">
             <div className="col-md-5 col-lg-4 order-md-last">
               <h4 className="d-flex justify-content-between align-items-center mb-3">
-                <span className="text-primary">Your Bag</span>
+                <span className="text-primary">{name} Bag</span>
                 <span className="badge bg-primary rounded-pill">
                   {quantity}
                 </span>
