@@ -42,3 +42,8 @@ span {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.details-title{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}

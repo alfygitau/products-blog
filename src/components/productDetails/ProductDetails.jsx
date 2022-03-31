@@ -76,9 +76,13 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
-      <h4 style={{ textAlign: "center", color: "rgb(204,46,67)" }}>
-        Related Products
-      </h4>
+      <div className="details-title">
+        <h4>Reviews</h4>
+        <h5>User Review</h5>
+        <h4 style={{ textAlign: "left", color: "rgb(204,46,67)" }}>
+          Related Products
+        </h4>
+      </div>
       <div className="related">
         {category?.map((item) => (
           <Products
@@ -90,6 +94,8 @@ const ProductDetails = () => {
             category={item.category}
             price={item.price}
             id={item.id}
+            rating={item.rating}
+            stock={item.stock}
           />
         ))}
       </div>
