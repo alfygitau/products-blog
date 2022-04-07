@@ -11,8 +11,9 @@ const ProductList = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
-  const [page, setPage] = useState(12);
-  const [limit, setLimit] = useState(12);
+
+  const [limit, setLimit] = useState(1);
+  const [page, setPage] = useState(1);
   const [searchResults, setSearchResults] = useState([]);
 
   const url = `https://dummyjson.com/products?limit=${limit}&skip=0`;
@@ -21,14 +22,14 @@ const ProductList = () => {
     await axios.get(url).then((response) => {
       console.log("page", response.data.products);
       setProducts(response.data.products);
-      setCount(response.data.total);
+      setCount(response.data.total / 10);
     });
   };
 
   const handleChange = async (event, value) => {
     console.log("value", value);
+    setLimit(value * 10);
     setPage(value);
-    setLimit(value);
   };
   console.log("pagination", limit);
 
