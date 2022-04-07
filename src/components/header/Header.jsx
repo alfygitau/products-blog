@@ -29,61 +29,78 @@ const Header = () => {
   const handleLogout = () => {
     dispatch(logout());
     navigate("/login");
-    toast.success("user logged out")
+    toast.success("user logged out");
   };
 
   return (
-    <div className="navbar">
-      <div className="logo">
-        <Link to="/">
-          {" "}
-          <img src={logo} alt="logo" />
-        </Link>
-        <span>shop</span>
-      </div>
-      <div className="links">
-        {tabs.map((tab, index) => (
-          <ul className="tabs" key={index}>
-            <li>
-              <NavLink to={tab.path}>{tab.tabname}</NavLink>
-            </li>
-          </ul>
-        ))}
-      </div>
-      {user ? (
-        <div className="authenticated">
-          <Avatar size="md" circle src={user.image} alt="@SevenOutman" />
-          <Link to="/profile">
-            <span>{user.username}</span>
-          </Link>
-          <button className="btn btn-outline-dark" onClick={handleLogout}>
-            Logout
-          </button>
-          <Link to="/cart">
-              <Badge badgeContent={quantity} color="secondary" >
-                <MdOutlineAddShoppingCart className="cart" />
-              </Badge>
+    <>
+      <nav className="navbar navbar-expand-lg navbar-light bg-white">
+        <div className="container">
+          <div className="logo">
+            <Link to="/">
+              {" "}
+              <img src={logo} alt="logo" />
             </Link>
-        </div>
-      ) : (
-        <div className="auth">
+            <span>shop</span>
+          </div>
           <button
-            className="btn btn-outline-primary"
-            onClick={() => navigate("/login")}
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            Login | <AiOutlineLogin />
+            <span className="navbar-toggler-icon"></span>
           </button>
-          &nbsp; &nbsp; &nbsp;
-          <span className="cart-icon">
-            <Link to="/cart">
-              <Badge badgeContent={quantity} color="success">
-                <MdOutlineAddShoppingCart className="cart" />
-              </Badge>
-            </Link>
-          </span>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="links">
+              {tabs.map((tab, index) => (
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0" key={index}>
+                  <li className="nav-item">
+                    <NavLink to={tab.path}>{tab.tabname}</NavLink>
+                  </li>
+                </ul>
+              ))}
+            </div>
+            {user ? (
+              <div className="authenticated">
+                <Avatar size="md" circle src={user.image} alt="@SevenOutman" />
+                <Link to="/profile">
+                  <span>{user.username}</span>
+                </Link>
+                <button className="btn btn-outline-dark" onClick={handleLogout}>
+                  Logout
+                </button>
+                <Link to="/cart">
+                  <Badge badgeContent={quantity} color="secondary">
+                    <MdOutlineAddShoppingCart className="cart" />
+                  </Badge>
+                </Link>
+              </div>
+            ) : (
+              <div className="auth">
+                <button
+                  className="btn btn-outline-primary"
+                  onClick={() => navigate("/login")}
+                >
+                  Login | <AiOutlineLogin />
+                </button>
+                &nbsp; &nbsp; &nbsp;
+                <span className="cart-icon">
+                  <Link to="/cart">
+                    <Badge badgeContent={quantity} color="success">
+                      <MdOutlineAddShoppingCart className="cart" />
+                    </Badge>
+                  </Link>
+                </span>
+              </div>
+            )}
+          </div>
         </div>
-      )}
-    </div>
+      </nav>
+    </>
   );
 };
 

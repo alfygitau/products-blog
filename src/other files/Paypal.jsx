@@ -10,6 +10,7 @@ const Paypal = () => {
   console.log(description);
   const [paidFor, setPaidFor] = useState(false);
 
+
   const handleApprove = (orderId) => {
     // send a request to the backend server
     setPaidFor(true);

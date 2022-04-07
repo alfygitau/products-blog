@@ -28,18 +28,17 @@ const ProductDetails = () => {
     fetchProduct(id);
   }, [id]);
 
-  const fetchCategory = async (category) => {
-    category = product.category;
-    console.log(category);
-    const response = await axios.get(
-      `https://dummyjson.com/products/category/${category}`
-    );
-    setCategory(response.data.products);
-  };
   useEffect(() => {
+    const fetchCategory = async (category) => {
+      category = product.category;
+      console.log(category);
+      const response = await axios.get(
+        `https://dummyjson.com/products/category/${category}`
+      );
+      setCategory(response.data.products);
+    };
     fetchCategory();
   }, [product]);
-  console.log("category", category);
 
   const handleAddToCart = () => {
     dispatch(addToCart({ ...product }));
@@ -80,7 +79,7 @@ const ProductDetails = () => {
         <h4>Reviews</h4>
         <h5>User Review</h5>
         <h4 style={{ textAlign: "left", color: "rgb(204,46,67)" }}>
-          Related Products
+          Other related products
         </h4>
       </div>
       <div className="related">
