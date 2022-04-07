@@ -42,3 +42,6 @@
 .carousel-inner button:hover{
   background-color: rgb(204, 46, 67);
 }
+.products-links a {
+  color: rgb(204, 46, 67);
+}
