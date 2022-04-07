@@ -52,7 +52,10 @@
 .links a.active {
   color: rgb(204, 46, 67);
 }
-.tabs li a:hover {
+.links li a:hover {
+  color: rgb(204, 46, 67);
+}
+.links li a{
   color: rgb(204, 46, 67);
 }
 .auth-button:hover {

@@ -19,13 +19,17 @@ const Search = ({ searchProducts }) => {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            <div className="input-group-text" id="btnGroupAddon">
+            <div
+              className="input-group-text"
+              id="btnGroupAddon"
+              style={{ backgroundColor: "rgb(204, 46, 67)" }}
+            >
               <button
                 type="submit"
                 onClick={() => searchProducts(keyword)}
-                style={{ backgroundColor: "transparent" }}
+                style={{ backgroundColor: "rgb(204, 46, 67)" }}
               >
-                <SavedSearchIcon />
+                <SavedSearchIcon style={{ color: "white" }} />
               </button>
             </div>
           </div>

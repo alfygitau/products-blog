@@ -9,6 +9,7 @@ import { Badge } from "@mui/material";
 import { Avatar } from "rsuite";
 import { logout } from "../../redux/userRedux";
 import { toast } from "react-toastify";
+import Announcement from "../../other files/Announcement/Announcement";
 
 const Header = () => {
   const tabs = [
@@ -34,6 +35,7 @@ const Header = () => {
 
   return (
     <>
+      <Announcement />
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
         <div className="container">
           <div className="logo">
@@ -59,7 +61,7 @@ const Header = () => {
               {tabs.map((tab, index) => (
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0" key={index}>
                   <li className="nav-item">
-                    <NavLink to={tab.path}>{tab.tabname}</NavLink>
+                    <NavLink to={tab.path}>{tab.tabname.toUpperCase()}</NavLink>
                   </li>
                 </ul>
               ))}
@@ -68,9 +70,12 @@ const Header = () => {
               <div className="authenticated">
                 <Avatar size="md" circle src={user.image} alt="@SevenOutman" />
                 <Link to="/profile">
-                  <span>{user.username}</span>
+                  <span>{user.username.toUpperCase()}</span>
                 </Link>
-                <button className="btn btn-outline-dark" onClick={handleLogout}>
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={handleLogout}
+                >
                   Logout
                 </button>
                 <Link to="/cart">

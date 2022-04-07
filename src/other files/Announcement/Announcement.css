@@ -1,0 +1,23 @@
+.announcement{
+    display: flex;
+    background-color: rgb(204, 46, 67);
+    color: white;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.announce-label{
+    flex: 3;
+    align-items: center;
+    text-align: center;
+}
+.announce-links{
+    flex: 1;
+    align-items: center;
+}
+.announce-links a{
+    padding-right: 10px;
+    color: white;
+}
