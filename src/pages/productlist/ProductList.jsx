@@ -47,7 +47,6 @@ const ProductList = () => {
       });
   };
 
-
   const searchProducts = async (keyword) => {
     await axios
       .get(`https://dummyjson.com/products/search?q=${keyword}`)
@@ -66,6 +65,18 @@ const ProductList = () => {
         <Search searchProducts={searchProducts} />
         <h4>Categories</h4>
         <Chips handleClick={handleClick} />
+      </div>
+      <div className="pagination">
+        <Pagination
+          className="my-3"
+          count={count}
+          page={page}
+          siblingCount={1}
+          boundaryCount={1}
+          variant="outlined"
+          shape="rounded"
+          onChange={handleChange}
+        />
       </div>
       <div className="productlist">
         {show &&
@@ -100,18 +111,6 @@ const ProductList = () => {
               id={product.id}
             />
           ))}
-        <div className="pagination">
-          <Pagination
-            className="my-3"
-            count={count}
-            page={page}
-            siblingCount={1}
-            boundaryCount={1}
-            variant="outlined"
-            shape="rounded"
-            onChange={handleChange}
-          />
-        </div>
       </div>
     </>
   );

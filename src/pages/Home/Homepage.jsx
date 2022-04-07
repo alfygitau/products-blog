@@ -2,6 +2,7 @@ import React from "react";
 import "./Homepage.css";
 import { NavLink, Outlet } from "react-router-dom";
 import Slider from "../../components/Slider/Slider";
+import { Breadcrumb } from "rsuite";
 
 const Homepage = () => {
   return (
