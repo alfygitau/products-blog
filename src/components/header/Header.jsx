@@ -80,7 +80,7 @@ const Header = () => {
             {user ? (
               <div className="authenticated">
                 <Dropdown
-                  title={user.username.toUpperCase()}
+                  title={user.username?.toUpperCase()}
                   icon={<PersonAddAlt />}
                   trigger={["click", "hover"]}
                 >
