@@ -1,10 +1,40 @@
-.footer{
-    margin-right: auto;
-    margin-left: auto;
-    width: 70%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.footer {
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
-.footer h5{
-    text-align: center;
+.footer h5 {
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  justify-content: space-around;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.guide {
+  flex: 1;
+}
+.help {
+  flex: 1;
+}
+.intern {
+  flex: 1;
+}
+.connect {
+  flex: 1;
+}
+.business {
+  flex: 1;
+}
+.connect span {
+  padding: 5px;
+}
+.main-footer {
+  background-color: rgb(243, 245, 249);
 }
