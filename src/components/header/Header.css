@@ -42,7 +42,7 @@
   justify-content: center;
 }
 .auth Button {
-  width: 100px;
+  /* width: 100px; */
 }
 .cart {
   font-size: 2rem;
@@ -58,9 +58,9 @@
 .links li a{
   color: rgb(204, 46, 67);
 }
-.auth-button:hover {
+/* .auth-button:hover {
   color: rgb(204, 46, 67);
-}
+} */
 .links li a.active {
   color: white;
   background-color: rgb(204, 46, 67);
@@ -70,9 +70,9 @@
 .links li a {
   text-decoration: none;
 }
-.auth button:hover {
+/* .auth button:hover {
   background-color: rgb(204, 46, 67);
-}
+} */
 .authenticated{
   display: flex;
   align-items: center;
@@ -82,4 +82,10 @@
 .authenticated span{
   padding-right: 10px;
   padding-left: 10px;
+}
+.auth a{
+  color: black;
+}
+.authenticated a {
+  color: black;
 }

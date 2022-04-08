@@ -35,7 +35,7 @@ const Slider = () => {
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="1000">
             <img
-              src="https://thumbs.dreamstime.com/b/collection-modern-touchscreen-smartphones-creative-abstract-mobile-phone-wireless-communication-technology-mobility-44433245.jpg"
+              src="https://image.kilimall.com/kenya/shop/store/goods/3007/2022/02/164516330907404f4dc09de0e4dea9ee24d3eebe45e18.jpg"
               className="d-block w-100"
               alt="..."
               height="450px"
@@ -48,7 +48,7 @@ const Slider = () => {
               <button
                 className="btn btn-outline-primary"
                 onClick={() => navigate("/products")}
-                style={{color: "black"}}
+                style={{ color: "black" }}
               >
                 Shop Now
               </button>
@@ -69,7 +69,7 @@ const Slider = () => {
               <button
                 className="btn btn-outline-primary"
                 onClick={() => navigate("/products")}
-                style={{color: "black"}}
+                style={{ color: "black" }}
               >
                 Shop Now
               </button>
@@ -77,7 +77,7 @@ const Slider = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://wallpaperaccess.com/full/334930.jpg"
+              src="https://ke.jumia.is/cms/external/pet/SO521EA0BSKP8NAFAMZ/5287016e59c55cd4e3490bc4f82898bc.jpg"
               className="d-block w-100"
               alt="..."
               height="450px"
@@ -91,7 +91,7 @@ const Slider = () => {
               <button
                 className="btn btn-outline-primary"
                 onClick={() => navigate("/products")}
-                style={{color: "black"}}
+                style={{ color: "black" }}
               >
                 Shop Now
               </button>

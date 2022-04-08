@@ -6,10 +6,21 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Badge } from "@mui/material";
-import { Avatar } from "rsuite";
+import { Avatar, Dropdown } from "rsuite";
 import { logout } from "../../redux/userRedux";
 import { toast } from "react-toastify";
 import Announcement from "../../other files/Announcement/Announcement";
+import {
+  ChatBubbleOutline,
+  Discount,
+  FavoriteBorder,
+  LocalMallOutlined,
+  Login,
+  ManageAccounts,
+  PersonAddAlt,
+  SettingsOutlined,
+  ShoppingBasket,
+} from "@mui/icons-material";
 
 const Header = () => {
   const tabs = [
@@ -68,10 +79,25 @@ const Header = () => {
             </div>
             {user ? (
               <div className="authenticated">
-                <Avatar size="md" circle src={user.image} alt="@SevenOutman" />
-                <Link to="/profile">
-                  <span>{user.username.toUpperCase()}</span>
-                </Link>
+                <Dropdown
+                  title={user.username.toUpperCase()}
+                  icon={<PersonAddAlt />}
+                  trigger={["click", "hover"]}
+                >
+                  <Dropdown.Item>
+                    <ShoppingBasket /> &nbsp; Orders
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => navigate("/profile")}>
+                    <ManageAccounts /> &nbsp; Profile
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <SettingsOutlined /> &nbsp; Settings
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Discount /> &nbsp; Coupons/discounts
+                  </Dropdown.Item>
+                </Dropdown>{" "}
+                &nbsp;&nbsp;
                 <button
                   className="btn btn-outline-danger"
                   onClick={handleLogout}
@@ -79,24 +105,40 @@ const Header = () => {
                   Logout
                 </button>
                 <Link to="/cart">
-                  <Badge badgeContent={quantity} color="secondary">
-                    <MdOutlineAddShoppingCart className="cart" />
+                  <Badge badgeContent={quantity} color="success">
+                    <LocalMallOutlined fontSize="large" />
                   </Badge>
                 </Link>
               </div>
             ) : (
               <div className="auth">
-                <button
-                  className="btn btn-outline-primary"
-                  onClick={() => navigate("/login")}
+                <Dropdown
+                  title="My Account"
+                  icon={<PersonAddAlt />}
+                  trigger={["click", "hover"]}
                 >
-                  Login | <AiOutlineLogin />
-                </button>
+                  <Dropdown.Item>
+                    <ShoppingBasket /> &nbsp; Order
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <FavoriteBorder /> &nbsp; Favourites
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <ChatBubbleOutline /> &nbsp; Messages
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Discount /> &nbsp; Coupons/discounts
+                  </Dropdown.Item>
+                  <hr />
+                  <Dropdown.Item onClick={() => navigate("/login")}>
+                    <Login /> &nbsp; Login
+                  </Dropdown.Item>
+                </Dropdown>
                 &nbsp; &nbsp; &nbsp;
                 <span className="cart-icon">
                   <Link to="/cart">
                     <Badge badgeContent={quantity} color="success">
-                      <MdOutlineAddShoppingCart className="cart" />
+                      <LocalMallOutlined fontSize="large" />
                     </Badge>
                   </Link>
                 </span>

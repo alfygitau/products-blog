@@ -10,23 +10,25 @@ const About = () => {
         <div className="col-md-6">
           <h3 className="text-primary fw-bold mb-4">About Us</h3>
           <p className="mb-4">
-            The pain itself is important to the main adipisicing elite. But the
-            error to which he may seek the distinction of those who accuse him
-            is bound to obtain, or by the labor of the blessed one, to receive
-            the pleasure which was born of him. We can trim that option in time.
-            By reason, there was no pleasure in rejecting them at the time, and
-            from that, it was wiser than those of these accusers to be greater
-            than that? The seasons, and most of all, are more labor
-            responsibilities than those. The desire for snacks is not less than
-            choices. We think that it will never be an awful mistake to obtain
-            something similar! For from time to time, we draw upon the words of
-            their minds, the troubles which one is bound to and the pain which
-            the very worthy of rejecting toils may not be the result of.
-            The desire for snacks is not less than
-            choices. We think that it will never be an awful mistake to obtain
-            something similar! For from time to time, we draw upon the words of
-            their minds, the troubles which one is bound to and the pain which
-            the very worthy of rejecting toils may not be the result of.
+            Sky shop is Kenya's largest online shopping mall. It was launched in
+            July 2014 with the mission of becoming No.1 E-commerce platform in
+            Africa, and has sites strategically distributed in the three
+            countries namely: Kenya, Uganda and Nigeria. Sky shop serves a
+            retail-customer base that continues to grow exponentially, offering
+            products that span various categories including Electronics such as
+            smart phones, laptops, subwoofer etc, Clothing, Home Appliances,
+            Fashion bag, Baby Products, makeup and much more. Sky shop continues
+            to expand the mall, with the scope of offerings that will increase
+            in variety, simplicity and convenience. The range of services are
+            designed to ensure optimum levels of convenience and customer
+            satisfaction with the retail process; order delivery-tracking,
+            dedicated customer service support and many other premium services.
+            The company is highly customer-centric and are committed towards
+            finding innovative ways of improving the customers' shopping
+            experience. Now, shopping with Sky shop App will bring you millions
+            of cash rewards, best customer services, and track your order at
+            anytime. Download Sky shop App APK and enjoy best service online in
+            Kenya.
           </p>
           <NavLink to="/contact" className="btn btn-outline-primary px-3">
             Contact Us

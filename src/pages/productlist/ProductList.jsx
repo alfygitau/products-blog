@@ -12,19 +12,11 @@ const ProductList = () => {
   const [show, setShow] = useState(true);
   const [count, setCount] = useState(0);
 
-  const [limit, setLimit] = useState(1);
+  const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(1);
   const [searchResults, setSearchResults] = useState([]);
 
   const url = `https://dummyjson.com/products?limit=${limit}&skip=0`;
-
-  const fetchProducts = async () => {
-    await axios.get(url).then((response) => {
-      console.log("page", response.data.products);
-      setProducts(response.data.products);
-      setCount(response.data.total / 10);
-    });
-  };
 
   const handleChange = async (event, value) => {
     console.log("value", value);
@@ -34,8 +26,17 @@ const ProductList = () => {
   console.log("pagination", limit);
 
   useEffect(() => {
-    fetchProducts(limit);
-  }, [limit]);
+    const fetchProducts = async () => {
+      await axios
+        .get(limit ? url: "https://dummyjson.com/products?limit=10&skip=0" )
+        .then((response) => {
+          console.log("page", response.data.products);
+          setProducts(response.data.products);
+          setCount(response.data.total / 10);
+        });
+    };
+    fetchProducts(url);
+  }, [url]);
 
   const handleClick = async (category) => {
     console.info("You clicked the Chip", category);
