@@ -1,3 +1,4 @@
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -8,22 +9,28 @@ import "./Login.css";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordShown, setPasswordShown] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const togglePassword = (e) => {
+    e.preventDefault();
+    setPasswordShown(!passwordShown);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
     login(dispatch, { username, password });
     navigate("/");
-    toast.success("successfully logged in")
+    toast.success("successfully logged in");
   };
   return (
     <>
       <div className="login-container">
-        <form onSubmit={handleLogin}>
+        <form>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
-              Username
+              Enter your Username
             </label>
             <input
               type="text"
@@ -38,14 +45,25 @@ const Login = () => {
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Password
+              Enter your Password
             </label>
-            <input
-              type="password"
-              className="form-control"
-              id="exampleInputPassword1"
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div class="input-group mb-3">
+              <input
+                type={passwordShown ? "text" : "password"}
+                class="form-control"
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span
+                class="input-group-text"
+                id="basic-addon2"
+                onClick={togglePassword}
+              >
+                {passwordShown ? <VisibilityOff /> : <Visibility />}
+              </span>
+            </div>
           </div>
           <div className="mb-3 form-check">
             <input
@@ -57,8 +75,8 @@ const Login = () => {
               Check me out
             </label>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+          <button onClick={handleLogin} className="btn btn-primary">
+            Login
           </button>
         </form>
       </div>

@@ -30,7 +30,7 @@ const Checkout = () => {
                     <div>
                       <h6 className="my-0">{product.title}</h6>
                       <small className="text-muted">
-                        {product.description.substring(0, 100)}
+                        {product?.description?.substring(0, 100)}
                       </small>
                     </div>
                     <span className="text-muted">
