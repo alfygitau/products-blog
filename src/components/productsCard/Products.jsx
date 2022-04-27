@@ -29,7 +29,7 @@ const Products = ({
       <h6 className="price">Price: $ {price}</h6>
       <Rate value={Math.trunc(rating)} allowHalf />
       <span>Available: {stock}</span>
-      <p>Description: {description.substring(0, 150)}...</p>
+      <p>Description: {description.substring(0, 120)}...</p>
     </div>
   );
 };
