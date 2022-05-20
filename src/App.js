@@ -21,31 +21,37 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />}>
-            <Route index element={<FeaturedProducts />} />
-            <Route path="new" element={<NewProducts />} />
-            <Route path="featured" element={<FeaturedProducts />} />
-          </Route>
-          <Route
-            path="/products"
-            element={<PrivateRoute component={ProductList} />}
-          />
-          <Route path="/products/:id" element={<ProductDetails />} />
-          <Route path="/create" element={<NewProduct />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="*" element={<NotFound />} />
-          <Route
-            path="/checkout"
-            element={<PrivateRoute component={Checkout} />}
-          />
-        </Routes>
-        <Footer />
+        <div className="navigation-position">
+          <Header />
+        </div>
+        <div className="routing">
+          <Routes>
+            <Route path="/" element={<Homepage />}>
+              <Route index element={<FeaturedProducts />} />
+              <Route path="new" element={<NewProducts />} />
+              <Route path="featured" element={<FeaturedProducts />} />
+            </Route>
+            <Route
+              path="/products"
+              element={<PrivateRoute component={ProductList} />}
+            />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/create" element={<NewProduct />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="*" element={<NotFound />} />
+            <Route
+              path="/checkout"
+              element={<PrivateRoute component={Checkout} />}
+            />
+          </Routes>
+        </div>
+        <div className="footer-position">
+          <Footer />
+        </div>
       </BrowserRouter>
     </div>
   );

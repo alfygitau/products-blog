@@ -1,0 +1,16 @@
+.navigation-position{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 10;
+}
+.routing{
+    position: relative;
+    top: 200px;
+    width: 100%;
+}
+.footer-position{
+    position: relative;
+    top: 30vh;
+}
