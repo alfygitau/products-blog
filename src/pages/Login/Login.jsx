@@ -51,7 +51,7 @@ const Login = () => {
               <input
                 type={passwordShown ? "text" : "password"}
                 class="form-control"
-                placeholder="Recipient's username"
+                placeholder="Enter your password"
                 aria-label="Recipient's username"
                 aria-describedby="basic-addon2"
                 onChange={(e) => setPassword(e.target.value)}
