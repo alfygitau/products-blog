@@ -85,7 +85,7 @@ const Slider = () => {
             <div className="carousel-caption d-none d-md-block">
               <h4 style={{ color: "black" }}>Wheel in the fun </h4>
               <h6 style={{ color: "black" }}>
-                Explore with the hottest ride. Best-selling in sports and
+                Explore with the best ride. Best-selling in sports and
                 outdoor
               </h6>
               <button
